@@ -11,6 +11,11 @@ export class ChatController {
     return { text: response };
   }
 
+  @Get('health')
+  healthCheck() {
+    return { status: 'ok' };
+  }
+
   @Get('history')
   async getHistory() {
     return this.chatService.getHistory();
