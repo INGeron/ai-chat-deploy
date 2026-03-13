@@ -1,12 +1,12 @@
 import React from "react";
 import { createRootRoute, Outlet, Link } from "@tanstack/react-router";
-import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 import { ToastProvider } from "@/contexts/ToastContext";
 import { ChatProvider, useChat } from "@/contexts/ChatContext";
 import { ToastContainer } from "@/components/ui/ToastContainer";
 import { Button } from "@/components/ui/button";
 import { Trash2, AlertCircle } from "lucide-react";
 import { CustomModal } from "@/components/ui/custom-modal";
+import { TanStackRouterDevtools } from "@tanstack/router-devtools";
 
 const RootComponent = () => {
   const { clearHistory, messages } = useChat();
@@ -78,7 +78,6 @@ const RootComponent = () => {
         <Outlet />
       </main>
       <ToastContainer />
-      <TanStackRouterDevtools />
     </div>
   );
 };
