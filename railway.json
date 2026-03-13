@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.app/v1.schema.json",
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "bun dist/main.js",
+    "healthcheckPath": "/chat/history",
+    "healthcheckTimeout": 300,
+    "restartPolicyType": "ON_FAILURE"
+  }
+}

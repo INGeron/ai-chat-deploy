@@ -1,0 +1,9 @@
+{
+  "build": {
+    "command": "docker build -t app .",
+    "directory": "."
+  },
+  "run": {
+    "command": "bun dist/main.js"
+  }
+}
